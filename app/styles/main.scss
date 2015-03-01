@@ -67,6 +67,9 @@ main {
 
 svg#me {
   width: 220px;
+  polygon {
+    opacity: 0;
+  }
 }
 
 @keyframes fadein {
