@@ -6,14 +6,78 @@
 // bower:scss
 // endbower
 
-.sample-intro {
-  padding-top: 60px;
-  font-family: 'Helvetica Neue', Helvetica;
-  text-align: center;
-  h1,
-  h2,
-  p {
-    color: rgb(246, 117, 50);
+
+* {
+  box-sizing: border-box;
+}
+
+html, body {
+  margin: 0;
+  padding: 0;
+}
+
+html { height:100%; }
+
+body { 
+  position:absolute; 
+  top:0; 
+  bottom:0; 
+  right:0; 
+  left:0;
+  transform-style: preserve-3d;
+}
+
+a {
+  font-family: monospace;
+  color: #000;
+  text-decoration: none;
+  &:visited {
+    color: #000;
   }
-  a { border-bottom-color: #f7854a; }
+}
+
+main {
+  height: 100%;
+}
+
+.center-screen {
+  height: 100%;
+  text-align: center;
+  &:before {
+    content: '';
+    height: 100%;
+    margin-right: -0.5em;
+    display: inline-block;
+    vertical-align: middle;
+  }
+}
+
+.me-wrap {
+  display: inline-block;
+  vertical-align: middle;
+  
+  margin: 20px 0;
+}
+
+.me {
+  width: 250px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+svg#me {
+  width: 220px;
+}
+
+@keyframes fadein {
+    from { opacity: 0; }
+    to   { opacity: 1; }
+}
+
+.contact {
+  margin-top: 20px;
+  text-align: center;
+  font-size: 0.75em;
+  opacity: 0;
+  animation: fadein 2s linear 2s forwards;
 }

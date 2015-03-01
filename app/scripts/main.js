@@ -2,4 +2,6 @@
 
 var myApp = myApp || {};
 
-console.log('Hodd luck!');
+document.addEventListener('DOMContentLoaded', function() { 
+  myApp.aniMe.init();
+});

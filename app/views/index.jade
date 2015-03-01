@@ -1,8 +1,15 @@
 extends layouts/_default
 
+mixin svg(file)
+  - var xml = fs.readFileSync(file)
+  div.svg-container!= xml
+
 block content
-  // Sample intro
-  .sample-intro
-    h1 Please Adam Mockor come for G.
-    h2 Hodd luck!
-    p= index.footer
+  
+  .center-screen
+    .me-wrap
+      .me
+        +svg('./app/images/me.svg')
+      
+      .contact
+        a(href="mailto:adam.mockor@gmail.com") adam.mockor@gmail.com

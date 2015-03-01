@@ -1,5 +1,7 @@
 {
   "name": "adam-mockor",
   "private": true,
-  "dependencies": {}
+  "dependencies": {
+    "gsap": "~1.15.1"
+  }
 }
