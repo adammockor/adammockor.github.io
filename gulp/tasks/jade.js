@@ -20,7 +20,10 @@ gulp.task('jade', ['jade:prepareData'], function() {
     }))
     .pipe(jade({
       pretty: true,
-      compileDebug: false
+      compileDebug: false,
+      locals: {
+        fs: require('fs')
+      }
     }))
     .pipe(gulp.dest('.tmp/'))
     .pipe(reload({stream:true}));
